@@ -94,4 +94,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Start the animation
     typeTitle();
+
+      const downloadResumeBtn = document.getElementById("downloadResumeBtn");
+
+    if (downloadResumeBtn) {
+        downloadResumeBtn.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevents the default action of the link
+
+            const fileUrl = downloadResumeBtn.getAttribute("href");
+            const fileName = "MuhammadAalyan_Resume.pdf"; // The desired file name
+
+            const a = document.createElement("a");
+            a.style.display = "none";
+            a.href = fileUrl;
+            a.download = fileName;
+
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    }
 });
