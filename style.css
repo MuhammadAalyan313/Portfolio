@@ -451,3 +451,47 @@ footer a:hover {
         box-shadow: 0 0 15px var(--primary-color), inset 0 0 15px var(--primary-color);
     }
 }
+
+ 
+
+
+
+
+
+
+
+/* Blinking cursor */
+.cursor {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+.hero-subtitle-static {
+    color: #a9a9a9; /* Muted gray/white for the static part */
+}
+
+.hero-subtitle-animated {
+    color: #ffd700; /* Vibrant yellow for the animated part */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Soft yellow glow */
+    font-weight: 500;
+}
+
+.hero-subtitle-animated::after {
+    content: "|";
+    display: inline-block;
+    color: #ffd700; /* Yellow cursor */
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
