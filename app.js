@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Simple Typing Effect for Subtitle ---
     const titles = [
+        "Web App Developer",
         "Software Developer",
-        "Web Developer",
         "API Developer",
     ];
     let titleIndex = 0;
